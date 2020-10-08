@@ -1,5 +1,23 @@
+body {
+    background: #FFC0CB;
+}
+h1, h2{
+    font-weight: bold;
+    font-family: Verdana sans-serif;
+    color: azure;
+}
+
+p, li{
+    font-weight: normal;
+    font-family: Verdana serif;
+    color: azure;
+}
 .maininfo {
     display: flex;
     justify-content: space-evenly;
     flex-grow: 11;
+}
+
+img {
+    border-radius: 30%;
 }
