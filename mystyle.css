@@ -1,21 +1,32 @@
 body {
-    background: #FFC0CB;
+    background:#F2F3F4;
+    margin-top: 2%;
+}
+pre {
+    margin-top: 15%;
 }
 h1, h2{
     font-weight: bold;
-    font-family: Verdana sans-serif;
-    color: azure;
+    font-family: "Snell Roundhand", cursive;
+    color: #4A433E;
 }
 
 p, li{
     font-weight: normal;
-    font-family: Verdana serif;
-    color: azure;
+    font-family: Verdana sans-serif;
+    color: #4A433E;
 }
 .maininfo {
     display: flex;
     justify-content: space-evenly;
     flex-grow: 11;
+    color: #dc143c;
+
+}
+
+
+div {
+    display: block;
 }
 
 img {
