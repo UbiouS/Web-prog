@@ -21,9 +21,16 @@ p, li{
     justify-content: space-evenly;
     flex-grow: 11;
     color: #dc143c;
+}
+.notMainInfo {
+    float: left; /* Обтекание по правому краю */
+    background: gainsboro; /* Цвет фона */
+    border: 1px solid black; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    margin-right: 10px; /* Отступ справа */
+    width: 10%; /* Ширина блока */
 
 }
-
 
 div {
     display: block;
