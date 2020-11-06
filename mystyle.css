@@ -28,8 +28,7 @@ p, li{
     border: 1px solid black; /* Параметры рамки */
     padding: 10px; /* Поля вокруг текста */
     margin-right: 10px; /* Отступ справа */
-    width: 10%; /* Ширина блока */
-
+    width: 17%; /* Ширина блока */
 }
 
 div {
