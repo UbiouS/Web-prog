@@ -3,6 +3,7 @@
 <html lang="ru">
 
 <head>
+    <script src="jslab.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title><strong>Убилава Ираклий. Группа М3307</strong></title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
@@ -125,4 +126,19 @@
 </div>
 </div>
 </body>
+
+<script>
+    function countTag() {
+        let tags = {}
+        for (tag of document.getElementsByTagName("*")) {
+            if (tag.tagName in tags)
+                tags[tag.tagName] += 1
+            else
+                tags[tag.tagName] = 1
+        }
+        return tags
+    }
+    console.log("Tags: ", countTag())
+
+</script>
 </html>

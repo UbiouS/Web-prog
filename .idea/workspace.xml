@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bddd37f3-be55-4334-921f-ce06417e2653" name="Default Changelist" comment="" />
+    <list default="true" id="bddd37f3-be55-4334-921f-ce06417e2653" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/jslab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task4.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20.11.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme" beforeDir="false" afterPath="$PROJECT_DIR$/readme" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +19,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -45,6 +53,8 @@
       <workItem from="1603454988680" duration="2632000" />
       <workItem from="1604657640853" duration="382000" />
       <workItem from="1604664433429" duration="4313000" />
+      <workItem from="1605883765462" duration="791000" />
+      <workItem from="1606559068395" duration="1938000" />
     </task>
     <servers />
   </component>

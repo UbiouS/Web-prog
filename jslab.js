@@ -1,7 +1,7 @@
 function rndArray(length) {
     const array = [];
     for (var i = 0; i < length; i++)
-        array.push(Math.floor(Math.random() * 100000) + 1)
+        array.push(Math.floor(Math.random() * 1000) + 1)
     return array
 }
 
