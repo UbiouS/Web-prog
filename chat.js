@@ -12,9 +12,9 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
 }
 
-const adjectives = ["Furious", "Merciless", "Boisterous", "Harsh", "Severe", "Outrageous", "Shattering"];
-const nouns = ["Lust", "Gluttony", "Greed", "Sloth", "Wrath", "Envy", "Pride"];
-const verbs = ["was destroyed", " has vanished", "was annihilated", "has been demolished", "was vanquished", "was overwhelmed", "was overthrown"];
+const nouns = ["Frog", "Yogurt", "Пасхалка", "Rick Roll", "Google", "Point", "leg", "A smooth criminal"];
+const verbs = ["was eaten", " has found", "was scared", "has been destroyed", "have been struck by a", "was threatened", "was ignored by"];
+const adjectives = ["Crazy", "Dumb", "Happy", "Murderous", "Dangerous", "Outrageous", "Shattering"];
 
 function answer(expression = null) {
     let date = new Date();
@@ -145,8 +145,8 @@ function sendMessage() {
     tag.appendChild(timeTag);
     let element = document.getElementById("chatWindow");
     element.appendChild(tag);
-    if (message.includes("calculate")) {
-        setTimeout(answer(expression = message.replace(/calculate /gi, "")), 1000);
+    if (message.includes("=")) {
+        setTimeout(answer(expression = message.replace(/= /gi, "")), 1000);
         element.scrollTop = element.scrollHeight;
         return;
     }
