@@ -51,6 +51,8 @@ function qs(array) {
     return qs(left).concat(pivot, qs(right));
 }
 
+
+
 function showContacts() {
     document.getElementById("popUp").style.visibility = "visible";
 }
@@ -93,3 +95,4 @@ console.log("Max: ", arrayMax(array))
 console.log("Min: ", arrayMin(array))
 console.log("Median: ", arrayMedian(array))
 console.log("Quicksort array: ", qs(array))
+

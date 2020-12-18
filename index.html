@@ -37,6 +37,15 @@
 
 <body>
 
+<section class="chatSection" id="chatView">
+    <button id="buttonCloseChat" onclick="closeChat()">CLOSE</button>
+    <b id="chatTitleText">CHAT TIME</b>
+    <div id="chatWindow"></div>
+    <div class="chatBottom">
+        <input id="inputLine"/>
+        <button id="sendButton" onclick="sendMessage()">SEND</button>
+    </div>
+</section>
 <div class ="maininfo">
     <div class="pic">
 
@@ -50,8 +59,27 @@
             <button id="buttonOpenContacts" onclick="showContacts()">
                 CONTACTS
             </button>
+            <button id="buttonOpenChat" onclick="openChat()">
+                CHAT
+            </button>
         </p>
     </div>
+        <script src="jslab.js"></script>
+        <script>
+            function countTag() {
+                let tags = {}
+                for (tag of document.getElementsByTagName("*")) {
+                    if (tag.tagName in tags)
+                        tags[tag.tagName] += 1
+                    else
+                        tags[tag.tagName] = 1
+                }
+                return tags
+            }
+            console.log("Tags: ", countTag())
+            console.log(window.tag)
+        </script>
+        <script type = "text/javascript" src="chat.js"></script>
         <div>
         <pre>
                             .d$$b
@@ -169,21 +197,5 @@
     </div>
 </div>
 
-<script src="jslab.js"></script>
 </body>
-<script>
-    function countTag() {
-        let tags = {}
-        for (tag of document.getElementsByTagName("*")) {
-            if (tag.tagName in tags)
-                tags[tag.tagName] += 1
-            else
-                tags[tag.tagName] = 1
-        }
-        return tags
-    }
-    console.log("Tags: ", countTag())
-    console.log(window.tag)
-</script>
-
 </html>
