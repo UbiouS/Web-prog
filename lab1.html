@@ -2,8 +2,34 @@
 
 <html lang="ru">
 
+
+
+<section class="popUpContacts" id="popUp">
+    <button id="buttonCloseContacts" onclick="closeContacts()">CLOSE</button>
+    <nav>
+        <ul id="popUpContacts">
+            <li>
+                <a class="bottomLink" href="https://vk.com/id5786133" target="_blank">
+                    <img src="я.jpg" class="logo" alt="vk"/>
+                </a>
+            </li>
+            <li>
+                <a class="bottomLink" href="https://www.t.me/iubilava" target="_blank">
+                    <img src="./я.jpg" class="logo" alt="telegram"/>
+                </a>
+            </li>
+            <li>
+                <a class="bottomLink" href="https://www.github.com/UbiouS" target="_blank">
+                    <img src="я.jpg" class="logo" alt="github"/>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</section>
+
 <head>
-    <script src="jslab.js"></script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title><strong>Убилава Ираклий. Группа М3307</strong></title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
@@ -21,6 +47,9 @@
             Номер телефона: <span class="tel">+7 911 215 22 49</span><br />
             Email: <a href="mailto:irakli1472583690@gmail.com">irakli1472583690@gmail.com</a><br />
             GitHub: <a href="https://github.com/UbiouS">https://github.com/UbiouS</a>
+            <button id="buttonOpenContacts" onclick="showContacts()">
+                CONTACTS
+            </button>
         </p>
     </div>
         <div>
@@ -125,8 +154,23 @@
         На самом деле, лучше места нет. Да и куда идти? Пандемия...<br></p>
 </div>
 </div>
-</body>
+<div class="slideshow-container">
+    <img src="me3.jpg" alt="я" class="selfImage"/>
+    <img src="me2.jpg" alt="я" class="selfImage"/>
+    <img src="me.jpg" alt="я" class="selfImage"/>
+    <a class="prevImage" onclick="plusSlides(-1)">❮</a>
+    <a class="nextImage" onclick="plusSlides(1)">❯</a>
+    <br>
 
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+
+<script src="jslab.js"></script>
+</body>
 <script>
     function countTag() {
         let tags = {}
@@ -139,6 +183,7 @@
         return tags
     }
     console.log("Tags: ", countTag())
-
+    console.log(window.tag)
 </script>
+
 </html>
