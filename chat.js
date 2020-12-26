@@ -9,13 +9,81 @@ function closeChat() {
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 const nouns = ["Frog", "Yogurt", "Пасхалка", "Rick Roll", "Google", "Point", "leg", "A smooth criminal"];
 const verbs = ["was eaten", " has found", "was scared", "has been destroyed", "have been struck by a", "was threatened", "was ignored by"];
 const adjectives = ["Crazy", "Dumb", "Happy", "Murderous", "Dangerous", "Outrageous", "Shattering"];
 
+class Calculator {
+    constructor(input) {
+        this.input = input;
+    }
+
+    static sortLambda = (a, b) => {
+         if (a.priority < b.priority) {
+            return -1;
+        }
+        if (a.priority > b.prioritys) {
+            return 1;
+        }
+        return 0;
+        };
+    static actions = ["*", "/", "+", "-", "^", "log", "log10", "sqrt()"]
+    static actionTypes = [
+        {
+            symbol: '*',
+            action:  (a,b) => a*b,
+            priority: 1,
+        },
+    ]
+
+    static addOperation(symbol, action, priority) {
+        this.actions.push(symbol);
+        this.actionTypes.push({symbol,action,priority});
+        this.actionTypes.sort(this.sortLambda);
+    }
+
+    static resolve(string){
+        const isEquation = this.actions.some((item)=>string.includes(item));
+
+        if(!isEquation){
+        return console.log('not equation')
+       }
+
+       let resultString = string;
+       let indexOfSymbol = -1;
+
+       this.actionTypes.forEach(element => {
+            do{
+                indexOfSymbol = string.indexOf(element.symbol);
+                if(indexOfSymbol !== -1){
+                    let regexp = /\d+\D+/g;
+                    regexp.lastIndex = indexOfSymbol;
+                    const firstNumIndex = string.substring(0,indexOfSymbol).search(/\d+$/g);
+                    const secondNumIndex = string.search(regexp);
+                    console.log(element);
+                    console.log('element',indexOfSymbol,'first',firstNumIndex,'second',secondNumIndex);
+                    const [firstNum] = string.substring(0,indexOfSymbol).match(/\d+$/g);
+                    const [secondNum] = string.match(regexp);
+                    const result = element.action(firstNum,secondNum);
+                
+                    const secondNumEndRegexp = /[\D+,$]+/g;
+                    secondNumEndRegexp.lastIndex = secondNumIndex;
+                    const secondNumEnd = string.search(secondNumEndRegexp);
+                    resultString = string.substring(0,firstNumIndex) + result + string.substring(secondNumEnd);
+                    console.log('resultstring',resultString);
+                }
+
+            } while(indexOfSymbol !==  -1)
+       });
+       console.log('result',resultString);
+       return resultString;
+    }
+
+   
+}
 function answer(expression = null) {
     let date = new Date();
 
@@ -145,7 +213,8 @@ function sendMessage() {
     tag.appendChild(timeTag);
     let element = document.getElementById("chatWindow");
     element.appendChild(tag);
-    if (message.includes("=")) {
+    if (message.includes(Calculator.actions)) {
+        console.log('resolved',Calculator.resolve(message));
         setTimeout(answer(expression = message.replace(/= /gi, "")), 1000);
         element.scrollTop = element.scrollHeight;
         return;
