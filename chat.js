@@ -17,9 +17,7 @@ const verbs = ["was eaten", " has found", "was scared", "has been destroyed", "h
 const adjectives = ["Crazy", "Dumb", "Happy", "Murderous", "Dangerous", "Outrageous", "Shattering"];
 
 class Calculator {
-    constructor(input) {
-        this.input = input;
-    }
+
 
     static sortLambda = (a, b) => {
          if (a.priority < b.priority) {
@@ -36,6 +34,16 @@ class Calculator {
             symbol: '*',
             action:  (a,b) => a*b,
             priority: 1,
+        },
+        {
+            symbol: '/',
+            action:  (a,b) => a/b,
+            priority: 1,
+        },
+        {
+            symbol: '+',
+            action:  (a,b) => a+b,
+            priority: 0,
         },
     ]
 
@@ -90,7 +98,7 @@ function answer(expression = null) {
     let x = Math.round(getRandomIntInclusive(0, 6));
     let y = Math.round(getRandomIntInclusive(0, 6));
     let z = Math.round(getRandomIntInclusive(0, 6));
-    let reply;
+    let reply = null;
 
     if (expression === null) {
         reply = adjectives[x] + " " + nouns[y] + " " + verbs[z];
