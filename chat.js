@@ -95,7 +95,7 @@ function answer(expression = null) {
     if (expression === null) {
         reply = adjectives[x] + " " + nouns[y] + " " + verbs[z];
     } else {
-        reply = eval(expression)
+        Calculator.resolve(reply);
     }
 
     let tag = document.createElement("div");
