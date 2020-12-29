@@ -18,7 +18,6 @@ const adjectives = ["Crazy", "Dumb", "Happy", "Murderous", "Dangerous", "Outrage
 
 class Calculator {
 
-
     static sortLambda = (a, b) => {
          if (a.priority < b.priority) {
             return -1;
@@ -43,6 +42,11 @@ class Calculator {
         {
             symbol: '+',
             action:  (a,b) => a+b,
+            priority: 0,
+        },
+        {
+            symbol: '-',
+            action:  (a,b) => a-b,
             priority: 0,
         },
     ]
